@@ -1,0 +1,17 @@
+---
+    - name: install PHP
+      apt: 
+       pkg:
+        - php
+        - php-mysql
+        - php-common
+        - php-mysql
+        - php-tidy
+        - php-xml
+        - php-xmlrpc
+        - php-mbstring
+        - php-curl
+        - php-zip
+       state: present
+    - name: restart apache
+      service: name=apache2 state=restarted

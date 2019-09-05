@@ -1,0 +1,11 @@
+---
+# tasks file for jlark-lamp
+
+- include_tasks: update.yml
+
+- include_tasks: apache.yml
+
+- include_tasks: mysql.yml
+
+- include_tasks: php.yml
+

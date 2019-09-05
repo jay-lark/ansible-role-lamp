@@ -1,0 +1,18 @@
+---
+    - name: Specify MySQL root password before installing
+      debconf: name='mysql-server' question='mysql-server/root_password' value='{{mysql_root}}' vtype='password'
+
+    - name: Confirm MySQL root password before installing
+      debconf: name='mysql-server' question='mysql-server/root_password_again' value='{{mysql_root}}' vtype='password'
+
+    - name: install mysql-server
+      apt: 
+       pkg:
+        - mysql-server
+        - mysql-client
+        - mysql-common
+        - python3-pip
+        - python3-mysqldb
+       state: present
+
+

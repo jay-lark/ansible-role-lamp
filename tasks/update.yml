@@ -1,0 +1,17 @@
+---
+    - name: update package list
+      apt: update_cache=yes
+    - name: upgrade server packages
+      apt: upgrade=dist
+    - name: reboot system if required
+      command: shutdown -r now "Rebooting System"
+               removes=/var/run/reboot-required
+      async: 1
+      poll: 0
+      ignore_errors: true
+    - name: Wait for the reboot to complete before continuing
+      wait_for_connection:
+       connect_timeout: 20
+       sleep: 5
+       delay: 5
+       timeout: 300
