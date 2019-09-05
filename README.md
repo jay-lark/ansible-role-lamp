@@ -23,7 +23,7 @@ Put your MySQL root password in vars/main.yml, and use something like the follow
       become: true
       hosts: all
       roles:
-      - role: jlark-lamp
+      - role: ansible-role-lamp
 
 This role was primarily designed to used in deployments of new servers so it will first do an apt update && apt upgrade on the system.  It will then reboot the server if required.
 
