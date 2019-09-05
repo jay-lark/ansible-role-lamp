@@ -1,7 +1,7 @@
 Ansible-role-LAMP
 =========
 
-This Ansible role will install a configure a simple LAMP installation on a Debian/Ubuntu based server  
+This Ansible role will install a simple LAMP installation on a Debian/Ubuntu based server  
 
 Requirements
 ------------
