@@ -1,11 +1,15 @@
 ---
 # tasks file for jlark-lamp
 
+#update.yml will upgrade all system packages to the latest version and then reboot the server as needed
 - include_tasks: update.yml
 
+#apache.yml will install apache2 with the rewrite module enabled.
 - include_tasks: apache.yml
 
+#mysql.yml will install mysql-server and set the root password as define in vars/main.yml
 - include_tasks: mysql.yml
 
+#php.yml will install php and several commonly used extensions.
 - include_tasks: php.yml
 

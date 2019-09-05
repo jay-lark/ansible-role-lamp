@@ -3,7 +3,7 @@
       apt: 
        name: apache2
        state: present
-    - name: Enable mod rewrite
+    - name: enable mod rewrite
       apache2_module:
        state: present
        name: rewrite
